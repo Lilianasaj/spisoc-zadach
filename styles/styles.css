@@ -1,0 +1,116 @@
+body{
+    font-size: 'Arial', sans-serif;
+    background: #dcd0fb;
+    color: #000000;
+    margin-top: 0%;
+}
+header {
+  text-align: left;
+  background: #784da5;
+  margin-bottom: 30px; 
+  color:#ffffff;
+}
+.new-zad {
+  background: white; 
+  padding: 25px; 
+  border-radius: 15px; 
+  width: 500px;
+}
+.new-zad input {
+  width: 200px; 
+  padding: 12px; 
+  border: 2.5 px #e2e8f0;
+  border-radius: 8px; 
+  font-size: 18px;
+}
+.new-zad button{
+  width: 105px; 
+  padding: 10px; 
+  border-radius: 8px; 
+  font-size: 14px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #784da5;
+}
+.block {
+   display: flex;
+  flex-wrap:nowrap; 
+  gap: 60px;
+}
+.backlog h2{
+    width: 105px; 
+  padding: 6px; 
+  border-radius: 8px; 
+  font-size: 23px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #a7a1a5;
+  text-align: center;
+}
+.backlog p {
+  background: #ffffff; 
+  padding: 12px; 
+  margin: 10px 0; 
+  border-radius: 8px; 
+  border-left: 4px solid#a7a1a5;
+}
+.in-process h2{
+  width: 130px; 
+  padding: 6px; 
+  border-radius: 8px; 
+  font-size: 23px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #6b7bd7;
+  text-align: center;
+}
+.in-process p {
+  background: #ffffff; 
+  padding: 12px; 
+  margin: 10px 0; 
+  border-radius: 8px; 
+  border-left: 4px solid#6b7bd7;
+}
+.done h2{
+  width: 130px; 
+  padding: 6px; 
+  border-radius: 8px; 
+  font-size: 23px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #39c184;
+  text-align: center;
+}
+.done p {
+  background: #ffffff; 
+  padding: 12px; 
+  margin: 10px 0; 
+  border-radius: 8px; 
+  border-left: 4px solid#39c184;
+}
+.trash h2{
+  width: 130px; 
+  padding: 6px; 
+  border-radius: 8px; 
+  font-size: 23px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #ca5757;
+  text-align: center;
+}
+.trash p {
+  background: #ffffff; 
+  padding: 12px; 
+  margin: 10px 0; 
+  border-radius: 8px; 
+  border-left: 4px solid#ca5757;
+}
+.trash button{
+ width: 105px; 
+  padding: 10px; 
+  border-radius: 8px; 
+  font-size: 14px;
+  color:#ffffff;
+  font-weight: bold;
+  background: #ca5757;
+}
