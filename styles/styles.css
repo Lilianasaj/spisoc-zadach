@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e1bcbc;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #000000;
+  font-size: 35px;
+}
+
+.new-task {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(95, 74, 74, 0.1);
+}
+
+.new-task h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.new-task input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.new-task button {
+  padding: 10px 15px;
+  background-color: #e1bcbc;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-task button:hover {
+  background-color: #a04586;
+}
+
+.desk {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.desk > div {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.desk h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.desk p {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border-left: 3px solid #ddd;
+}
+
+.trash button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trash button:hover {
+  background-color: #cc0000;
+}
+
+/* Специфичные цвета для разных колонок */
+.backlog p {
+  border-left-color: #d0fe00;
+}
+
+.in-process p {
+  border-left-color: #0073f6;
+}
+
+.done p {
+  border-left-color: #00ff59;
+}
+
+.trash p {
+  border-left-color: #ff2a00;
+}
+.desk li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border-left: 5px solid #ddd;
+    list-style-type: none;
+}
+.backlog li {
+    border-left-color: #a709f6;
+}
