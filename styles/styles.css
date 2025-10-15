@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e1bcbc;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #000000;
+  font-size: 35px;
+}
+
+.new-task {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(95, 74, 74, 0.1);
+}
+
+.new-task h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.new-task input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.new-task button {
+  padding: 10px 15px;
+  background-color: #e1bcbc;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-task button:hover {
+  background-color: #a04586;
+}
+
+.desk {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.desk > div {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.desk h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.desk p {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border-left: 3px solid #ddd;
+}
+
+.trash button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trash button:hover {
+  background-color: #cc0000;
+}
+
+/* Специфичные цвета для разных колонок */
+
+.desk li {
+  
+    list-style-type: none;
+}
+.backlog li {
+    border-left-color: #a709f6;
+}
+/* Стили для каждой колонки по порядку */
+
+/* Колонка 1 — Бэклог */
+.desk > div:nth-child(1) li {
+  border-left-color: #ff6b6b;
+}
+
+/* Колонка 2 — В процессе */
+.desk > div:nth-child(2) li {
+  border-left-color: #4ecdc4;
+}
+
+/* Колонка 3 — Готово */
+.desk > div:nth-child(3) li {
+  border-left-color: #1dd1a1;
+}
+
+/* Колонка 4 — Корзина */
+.desk > div:nth-child(4) li {
+  border-left-color: #8395a7;
+}
+
+/* Кнопка очистки корзины */
+.desk > div:nth-child(4) button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.desk > div:nth-child(4) button:hover {
+  background-color: #cc0000;
+}
+/* Добавьте в styles.css */
+.empty-task-list {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.empty-task-list__message {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+}
+.clear-basket-btn:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+.clear-basket-btn:disabled:hover {
+  background-color: #cccccc !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
