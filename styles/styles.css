@@ -1,116 +1,237 @@
-body{
-    font-size: 'Arial', sans-serif;
-    background: #dcd0fb;
-    color: #000000;
-    margin-top: 0%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e1bcbc;
+  padding: 20px;
+}
+
 header {
-  text-align: left;
-  background: #784da5;
-  margin-bottom: 30px; 
-  color:#ffffff;
+  text-align: center;
+  margin-bottom: 30px;
 }
-.new-zad {
-  background: white; 
-  padding: 25px; 
-  border-radius: 15px; 
-  width: 500px;
+
+header h1 {
+  color: #000000;
+  font-size: 35px;
 }
-.new-zad input {
-  width: 200px; 
-  padding: 12px; 
-  border: 2.5 px #e2e8f0;
-  border-radius: 8px; 
+
+.new-task {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(95, 74, 74, 0.1);
+}
+
+.new-task h2 {
+  color: #ffffff;
   font-size: 18px;
+  margin-bottom: 15px;
 }
-.new-zad button{
-  width: 105px; 
-  padding: 10px; 
-  border-radius: 8px; 
-  font-size: 14px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #784da5;
+
+.new-task input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
 }
-.block {
-   display: flex;
-  flex-wrap:nowrap; 
-  gap: 60px;
+
+.new-task button {
+  padding: 10px 15px;
+  background-color: #e1bcbc;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.backlog h2{
-    width: 105px; 
-  padding: 6px; 
-  border-radius: 8px; 
-  font-size: 23px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #a7a1a5;
+
+.new-task button:hover {
+  background-color: #a04586;
+}
+
+.desk {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.desk > div {
+  background: rgb(122, 114, 114);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.desk h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.desk p {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border-left: 3px solid #ddd;
+}
+
+.trash button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trash button:hover {
+  background-color: #cc0000;
+}
+
+/* Специфичные цвета для разных колонок */
+
+.desk li {
+  
+    list-style-type: none;
+}
+.backlog li {
+    border-left-color: #a709f6;
+}
+/* Стили для каждой колонки по порядку */
+
+/* Колонка 1 — Бэклог */
+.desk > div:nth-child(1) li {
+  border-left-color: #ff6b6b;
+}
+
+/* Колонка 2 — В процессе */
+.desk > div:nth-child(2) li {
+  border-left-color: #4ecdc4;
+}
+
+/* Колонка 3 — Готово */
+.desk > div:nth-child(3) li {
+  border-left-color: #1dd1a1;
+}
+
+/* Колонка 4 — Корзина */
+.desk > div:nth-child(4) li {
+  border-left-color: #8395a7;
+}
+
+/* Кнопка очистки корзины */
+.desk > div:nth-child(4) button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.desk > div:nth-child(4) button:hover {
+  background-color: #cc0000;
+}
+/* Добавьте в styles.css */
+.empty-task-list {
   text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.5);
 }
-.backlog p {
-  background: #ffffff; 
-  padding: 12px; 
-  margin: 10px 0; 
-  border-radius: 8px; 
-  border-left: 4px solid#a7a1a5;
+
+.empty-task-list__message {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
 }
-.in-process h2{
-  width: 130px; 
-  padding: 6px; 
-  border-radius: 8px; 
-  font-size: 23px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #6b7bd7;
-  text-align: center;
+.clear-basket-btn:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
 }
-.in-process p {
-  background: #ffffff; 
-  padding: 12px; 
-  margin: 10px 0; 
-  border-radius: 8px; 
-  border-left: 4px solid#6b7bd7;
+
+.clear-basket-btn:disabled:hover {
+  background-color: #cccccc !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
-.done h2{
-  width: 130px; 
-  padding: 6px; 
-  border-radius: 8px; 
-  font-size: 23px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #39c184;
-  text-align: center;
+.task-item.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
 }
-.done p {
-  background: #ffffff; 
-  padding: 12px; 
-  margin: 10px 0; 
-  border-radius: 8px; 
-  border-left: 4px solid#39c184;
+
+.task-list.drag-over {
+  background-color: rgba(102, 126, 234, 0.1);
+  border: 2px dashed #667eea;
 }
-.trash h2{
-  width: 130px; 
-  padding: 6px; 
-  border-radius: 8px; 
-  font-size: 23px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #ca5757;
-  text-align: center;
+
+.task-item {
+  transition: all 0.2s ease;
+  cursor: grab;
 }
-.trash p {
-  background: #ffffff; 
-  padding: 12px; 
-  margin: 10px 0; 
-  border-radius: 8px; 
-  border-left: 4px solid#ca5757;
+
+.task-item:active {
+  cursor: grabbing;
 }
-.trash button{
- width: 105px; 
-  padding: 10px; 
-  border-radius: 8px; 
-  font-size: 14px;
-  color:#ffffff;
-  font-weight: bold;
-  background: #ca5757;
+
+.task-item.dragging {
+  opacity: 0.5;
+  transform: rotate(5deg);
+  background-color: rgba(102, 126, 234, 0.2);
 }
+
+.task-list.drag-over {
+  background-color: rgba(102, 126, 234, 0.1);
+  border: 2px dashed #667eea;
+  transition: all 0.2s ease;
+}
+
+.task-item {
+  transition: all 0.2s ease;
+  cursor: grab;
+  margin: 8px 0;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-item:active {
+  cursor: grabbing;
+}
+
+.task-item.placeholder {
+  background-color: rgba(102, 126, 234, 0.1);
+  border: 2px dashed #667eea;
+  height: 50px;
+}
+
+/* Анимация при перетаскивании */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.task-list.drag-over .task-item:not(.dragging) {
+  animation: pulse 1s infinite;
+}
+
