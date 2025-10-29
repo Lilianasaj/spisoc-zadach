@@ -1,4 +1,3 @@
-// framework/render.js
 import { AbstractComponent } from '../view/abstract-component.js';
 
 const RenderPosition = {
@@ -26,4 +25,19 @@ function render(component, container, place = RenderPosition.BEFOREEND) {
   container.insertAdjacentElement(place, component.element);
 }
 
-export { RenderPosition, createElement, render };
+/**
+ * Удаляет компонент из DOM.
+ * Безопасно: проверяет, есть ли элемент, перед удалением.
+ */
+function remove(component) {
+  if (!(component instanceof AbstractComponent)) {
+    throw new Error('Can remove only components');
+  }
+
+  const element = component.element;
+  if (element && element.parentElement) {
+    element.parentElement.removeChild(element);
+  }
+}
+
+export { RenderPosition, createElement, render, remove };
